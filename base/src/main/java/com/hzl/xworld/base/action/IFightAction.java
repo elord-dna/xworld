@@ -1,5 +1,7 @@
 package com.hzl.xworld.base.action;
 
+import com.hzl.xworld.base.role.Role;
+import com.hzl.xworld.base.role.impl.Pla;
 import com.hzl.xworld.base.skill.ISkill;
 
 public interface IFightAction extends IAction {
@@ -11,4 +13,6 @@ public interface IFightAction extends IAction {
     default void cast(ISkill skill) {
         skill.affectAll();
     }
+
+    void cast(ISkill skill, Role des);
 }
