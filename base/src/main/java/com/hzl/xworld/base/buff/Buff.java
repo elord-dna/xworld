@@ -11,4 +11,5 @@ public class Buff {
 
     private Role fromRole; // 来源
 
+    public void trigger() {}
 }

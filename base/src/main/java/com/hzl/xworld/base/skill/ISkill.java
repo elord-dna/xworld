@@ -11,4 +11,17 @@ public interface ISkill extends IFightAction {
      */
     void affect(Role role);
     void affect(List<Role> roles);
+
+    /**
+     * 给出一个能够影响全部的方法
+     */
+    void affectAll();
+
+    /**
+     * 这个方法都必须实现，必须要有来源，默认来源不存在或者来源于一个不存在的事物
+     * @return
+     */
+    default Role getFromRole() {
+        return null;
+    }
 }
